@@ -66,7 +66,7 @@ export function printCards(cardProducts) {
                     ? `<span class="card-body_stock">Stock: ${quantity}</span>`
                     : `<span class="sold-out">SOLD OUT</span>`
                 }
-                <p class="card-body_name">${name}</p>
+                <p class="card-body_name" id="card_name-${id}">${name}</p>
             </div>
         </div>
         `;
@@ -219,5 +219,45 @@ export function handleMixtup() {
         animation: {
             duration: 300,
         },
+    });
+}
+
+export function showModule(cardProducts) {
+    document.getElementById(`products-cards`).addEventListener('click', (e) => {
+        const moduleHTML = document.querySelector('.module');
+        const cardId = Number(e.target.id.slice(10));
+        const productFind = cardProducts.find((product) => product.id === cardId);
+        let html = '';
+        for (const {id, image, name, description, price, quantity } of cardProducts) {
+            if (cardId === id) {
+                html = `
+                <div class="module-product"> 
+                    <i class="fa-solid fa-xmark module_close"></i>
+                    <div class="module-img">
+                        <img src="${image}" alt="${name.split(' ')[0]}">
+                    </div>
+                    <div class="module-body">
+                        <h5>${name}</h5>
+                        <p class="descrip">${description}</p>
+                    </div>
+                    <div class="module-footer">
+                        <p class="price">$${price.toFixed(2)}</p>
+                        <i class="fa-solid fa-plus"></i>
+                        ${
+                            quantity
+                            ? `<p class="stock">Stock: ${quantity}</p>`
+                            : `<span class="sold-out">SOLD OUT</span>`
+                        }                        
+                    </div>
+                </div>
+                `;
+                moduleHTML.innerHTML = html;
+                moduleHTML.classList.add('module_show');
+                closeModule();
+            }
+            function closeModule() {
+                document.querySelector('.module_close').addEventListener('click', () => moduleHTML.classList.remove('module_show'))
+            }
+        }
     });
 }

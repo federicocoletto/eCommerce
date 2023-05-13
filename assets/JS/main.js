@@ -1,5 +1,5 @@
 import { getProducts } from "./api.js";
-import { openMenu, activeNavbar, openCart, printCards, addFromProductsCards, printCartProducts, handleProductsInCart, printTotal, handleTotal, printAmount, handleMixtup } from "./functions.js";
+import { openMenu, activeNavbar, openCart, printCards, addFromProductsCards, printCartProducts, handleProductsInCart, printTotal, handleTotal, printAmount, handleMixtup, showModule } from "./functions.js";
 
 async function main() {
     openMenu();
@@ -18,7 +18,24 @@ async function main() {
     handleTotal(products, cart);
     printAmount(cart);
     handleMixtup();
-    
+    showModule(products);
+    // showModule(products);
+
+// const module = document.querySelector('.module');
+
+// for (const {
+//     description,
+//     id,
+//     image,
+//     name,
+//     price,
+//     quantity
+// } of products) {
+//     let html = '';
+
+
+        
+
 }
 
 
