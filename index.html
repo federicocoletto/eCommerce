@@ -17,14 +17,18 @@
 </head>
 <body>
 
+    <!-- ? NAVBAR -->
     <header class="navbar__cnt container">
         <nav class="navbar">
             <div class="navbar__leftside">
                 <a href="#home">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="logo-icon">
+                    <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="load__gif">
                         <title>Academlo Logo</title>
                         <g>
                             <g>
+                                <path
+                                    d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+                                </path>
                                 <path
                                     d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
                                 </path>
@@ -42,6 +46,7 @@
             <div class="navbar__rightside">
                 <i class="fa-solid fa-chevron-left"></i>
                 <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-amount-items"></span>
                 <div class="chart-counter"></div>
                 <i class="fa-solid fa-moon"></i>
             </div>
@@ -55,6 +60,170 @@
             </ul>
         </menu>
     </header>
+
+    <!-- ? CART -->
+    <div class="cart">            
+        <i class="fa-solid fa-xmark"></i>
+        <div class="cart-top">
+            <!-- <div class="cart-item">
+                <div class="cart-item_img">
+                    <img src="" alt="">
+                </div>
+                <div class="cart-item_detail">
+                    <p class="cart-item_name"></p>
+                    <span class="cart-item_stock"></span>
+                    <span class="cart-item_price"></span>
+                    <p class="cart-item_subtotal"></p>
+                    <div class="cart-item_units">
+                        <i class="fa-solid fa-minus"></i>
+                        <span class="units"></span>
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="cart-bottom">
+            <!-- <div class="cart-total">
+                <p class="total-items">10 items</p>
+                <p class="total-cash">$150.000</p>
+            </div> -->
+        </div>
+        <button type="button" id="buy-btn">Comprar</button>
+    </div>
+    
+    <!-- * APP -->
+    <div class="app">
+
+        <!-- ? HERO -->
+        <main id="home" class="hero">
+            <div class="hero__top">
+                <div></div>
+                <div class="hero__top-img">
+                    <img src="assets/images/sweater2.png" alt="product">
+                </div>
+                <div class="hero__bottom large">
+                    <h1>New Sweatshirt COLLECTIONS 2022</h1>
+                    <p>Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern design.</p>
+                    <h3>$ 14.00</h3>
+                    <button type="button"><a href="#products">Show more</a></button>
+                </div>
+            </div>
+            
+            <div class="hero__bottom small">
+                <h1>New Sweatshirt COLLECTIONS 2022</h1>
+                <p>Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern design.</p>
+                <h3>$ 14.00</h3>
+                
+                <button type="button"><a href="#products">Show more</a></button>
+            </div>
+        </main>
+
+        <!-- ? FILTER BUTTONS -->
+        <div class="filter__btns">
+            <div>
+                <button class="filter-btn" id="all" data-filter="all">
+                    <p>All</p>
+                    <small>Show all products</small>
+                </button>
+            </div>
+            
+            <div>
+                <button class="filter-btn" id="shirt" data-filter=".shirt">
+                    <p>Shirts</p>
+                    <small>3 products</small>
+                </button>
+            </div>
+            
+            <div>
+                <button class="filter-btn" id="hoddie" data-filter=".hoddie">
+                    <p>Hoddies</p>
+                    <small>3 products</small>
+                </button>
+            </div>
+            
+            <div>
+                <button class="filter-btn" id="sweater" data-filter=".sweater">
+                    <p>Sweaters</p>
+                    <small>3 products</small>
+                </button>
+            </div>
+        </div>
+
+        <!-- ? PRODUCTS CARDS -->
+        <div id="products-cards">
+            <!-- <div class="product-card">
+            <div class="card-img">
+                <i class="fa-solid fa-plus card-plus" id="card-${id}"></i>
+                <img src="${image}" alt="">
+            </div>
+            <div class="card-body">
+                <span class="card-body_price">$${price}.00</span>
+                <span class="card-body_stock">Stock: ${quantity}</span>
+                <p class="card-body_name">${name}</p>
+            </div>
+        </div> -->
+        </div>
+
+    </div>
+
+    <!-- ? FOOTER -->
+    <footer id="info" class="info">
+        <div class="info-item">
+            <h4>Our information</h4>
+            <ul>
+                <li><a class="info-a">Toluca - México</a></li>
+            </ul>
+            
+        </div>
+        <div class="info-item">
+            <h4>About Us</h4>
+            <ul>
+                <li><a class="info-a">Support Center</a></li>
+                <li><a class="info-a">Customer Support</a></li>
+                <li><a class="info-a">About Us</a></li>
+                <li><a class="info-a">Copy Right</a></li>
+            </ul>
+        </div>
+        <div class="info-item">
+            <h4>Products</h4>
+            <ul>
+                <li><a class="info-a">Hoodies</a></li>
+                <li><a class="info-a">Shirts</a></li>
+                <li><a class="info-a">About Us</a></li>
+                <li><a class="info-a">Sweatshirts</a></li>
+            </ul>
+        </div>
+        <div class="info-item">
+            <h4>Social</h4>
+            <ul>
+                <li><a class="info-a social-a-fb" id="fb" href="#"><i class="fa-brands fa-square-facebook social-i-fb"></i></a></li>
+                <li><a class="info-a social-a-tw" href="#"><i class="fa-brands fa-square-twitter social-i-tw"></i></a></li>
+                <li><a class="info-a social-a-ig" href="#"><i class="fa-brands fa-square-instagram social-i-ig"></i></a></li>   </ul>
+        </div>
+
+        <article class="small">
+            <p>Federico Coletto | 2023</p>
+            <p><b>Correo:</b> federico.coletto@fce.uncu.edu.ar</p>
+            <p><b>GitHub:</b> federicocoletto</p>
+        </article>
+    </footer>
+
+    <!-- ? LOADING DOM -->
+    <!-- <div class="loadingDOM">
+        <div class="loadingBox">
+            <div class="loadingItem"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="logo-icon">
+                <title>Academlo Logo</title>
+                <g>
+                    <g>
+                        <path
+                            d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                        </path>
+                    </g>
+                </g>
+            </svg></div>
+        </div>
+    </div> -->
     
 </body>
 </html>
