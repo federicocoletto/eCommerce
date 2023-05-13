@@ -41,9 +41,9 @@ async function main() {
 
 window.addEventListener('load', main());
 
-// window.addEventListener("load", function() {
-//     setTimeout(function() {
-//         const loadingDOMHTML = document.querySelector(".loadingDOM");
-//         loadingDOMHTML.classList.add("loadingDOM__none");
-//     }, 3000);
-// })
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        const loadingDOMHTML = document.querySelector(".loadingDOM");
+        loadingDOMHTML.classList.add("loadingDOM__none");
+    }, 3000);
+})
